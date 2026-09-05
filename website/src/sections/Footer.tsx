@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import basmaLogo from '../../assets/basma-logo.png'
 import { Icon } from '../components/Icon'
 import { Logo } from '../components/Logo'
 import { usePreferences } from '../context/PreferencesContext'
@@ -8,6 +9,7 @@ export function Footer() {
   const { language, t } = usePreferences()
   const { categories, contact, settings, socialLinks } = useContent()
   const year = 2026
+  const basmaWebsite = 'https://basma-company.vercel.app/'
   const basmaInstagram = 'https://www.instagram.com/build.with.basma?igsi=MXI2NHFpdHJpd21qdw=='
   const storeName = settings?.storeName[language] ?? 'Jalal Shops'
   const whatsappHref = `https://wa.me/${contact?.whatsappNumber ?? '963932383855'}`
@@ -41,8 +43,17 @@ export function Footer() {
         </div>
         <a className="site-footer__top" href="#home" aria-label={t.footer.backToTop}><Icon name="arrow" /></a>
       </div>
+      <a className="container basma-credit" href={basmaWebsite} target="_blank" rel="noreferrer" aria-label={`${t.footer.basmaTitle} — basma-company.vercel.app`}>
+        <div className="basma-credit__logo"><img src={basmaLogo} alt="Basma Company" loading="lazy" /></div>
+        <div className="basma-credit__copy">
+          <small>{t.footer.basmaEyebrow}</small>
+          <strong>{t.footer.basmaTitle}</strong>
+          <p>{t.footer.basmaText}</p>
+        </div>
+        <div className="basma-credit__link" dir="ltr"><span>basma-company.vercel.app</span><Icon name="arrow" /></div>
+      </a>
       <div className="container site-footer__bottom">
-        <p>© {year} {t.footer.rights} <a className="site-footer__credit" href={basmaInstagram} target="_blank" rel="noreferrer">Basma</a></p>
+        <p>© {year} {t.footer.rights} <a className="site-footer__credit" href={basmaWebsite} target="_blank" rel="noreferrer">Basma</a></p>
         <a className="site-footer__instagram" href={basmaInstagram} target="_blank" rel="noreferrer" aria-label="Basma on Instagram"><Icon name="instagram" />@build.with.basma</a>
       </div>
     </footer>

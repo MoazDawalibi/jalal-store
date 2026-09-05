@@ -1,6 +1,7 @@
 node_modules
 dist
 assets/*
+!assets/basma-logo.png
 !assets/3828e225-947d-4fd8-a3d9-77668208a938-1000x1000-U78sS2mVtXM6AD9kc0duZYV5kIF406Kfd4GHTeSN.jpg
 !assets/71k-vtnxo4lacsl1500_90.webp
 !assets/LXN7GUeegUsj0VMaurzGz9WyZBDTOzjn1wmtoCVN.png

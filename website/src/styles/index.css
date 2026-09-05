@@ -380,6 +380,25 @@
   .site-footer__instagram { display: inline-flex; align-items: center; gap: .4rem; color: var(--footer-soft); font-size: .68rem; transition: color var(--transition); }
   .site-footer__instagram:hover, .site-footer__credit:hover { color: var(--primary-deep); }
   .site-footer__instagram svg { width: .9rem; height: .9rem; }
+  .basma-credit { display: grid; grid-template-columns: 210px minmax(0, 1fr) auto; align-items: center; gap: 1.5rem; margin-block-start: 2rem; padding: 1.25rem; border: 1px solid var(--footer-border); border-radius: 18px; color: var(--footer-text); background: var(--footer-surface); transition: border-color var(--transition); }
+  .basma-credit:hover { border-color: var(--primary-deep); }
+  .basma-credit:focus-visible { outline: 2px solid var(--primary-deep); outline-offset: 4px; }
+  .basma-credit__logo { height: 110px; overflow: hidden; border-radius: 12px; background: #111; }
+  .basma-credit__logo img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .basma-credit__copy { min-width: 0; }
+  .basma-credit__copy small { display: block; margin-block-end: .35rem; color: var(--primary-deep); font-size: .65rem; font-weight: 800; }
+  .basma-credit__copy strong { font-size: clamp(1rem, 2vw, 1.35rem); }
+  .basma-credit__copy p { margin-block-start: .5rem; color: var(--footer-soft); font-size: .8rem; line-height: 1.65; }
+  .basma-credit__link { display: flex; align-items: center; gap: .65rem; color: var(--footer-text); font-size: .75rem; font-weight: 700; }
+  .basma-credit__link svg { width: 1rem; height: 1rem; flex-shrink: 0; }
+  @media (max-width: 1000px) {
+    .basma-credit { grid-template-columns: 180px minmax(0, 1fr); }
+    .basma-credit__link { grid-column: 1 / -1; justify-content: space-between; padding-block-start: 1rem; border-block-start: 1px solid var(--footer-border); }
+  }
+  @media (max-width: 600px) {
+    .basma-credit { grid-template-columns: 1fr; gap: 1rem; padding: 1rem; }
+    .basma-credit__logo { width: 210px; max-width: 100%; }
+  }
 }
 
 @layer motion {
