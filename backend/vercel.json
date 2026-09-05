@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "functions": {
+    "index.ts": { "maxDuration": 30 }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/index.ts" },
+    { "source": "/health", "destination": "/index.ts" }
+  ]
+}
